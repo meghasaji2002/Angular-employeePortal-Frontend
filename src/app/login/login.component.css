@@ -1,0 +1,14 @@
+#body{
+    background-image: url('https://wallpaperaccess.com/full/4893666.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+.loginbtn{
+   color: #2becf6;
+   
+}
+
+.loginbtn:hover{
+    background-color:#2becf6 ;
+    color: black;
+}

@@ -1,0 +1,15 @@
+/* @media screen and (max-width: 768px) {
+     .sidebar{
+     height: 200px;
+    }
+  } */
+  .cancelBtn{
+    background-color: rgb(22, 165, 165);
+    color: white;
+  }
+  .addBtn{
+    background-color: rgba(99, 237, 237, 0.927);
+  }
+  .addBtn:hover{
+    color: red;
+  }

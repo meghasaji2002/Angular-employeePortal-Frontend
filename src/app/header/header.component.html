@@ -1,0 +1,11 @@
+<nav class="navbar p-3" style="background-color: black;">
+    <div class="container-fluid ">
+      <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+        <i class="fa-solid fa-users fs-2 me-2" style="color: #2becf6;"></i>
+       <h5 style="color: #2becf6;font-size: 20px;"> EMPLOYEE PORTAL</h5>
+      </a>
+      <button *ngIf="logged" (click)="logout()" class="btn "><i class="fa-solid fa-power-off text-info fs-4"></i></button>
+    </div>
+  </nav>
+
+

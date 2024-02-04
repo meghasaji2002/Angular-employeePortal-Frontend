@@ -1,0 +1,221 @@
+<div class='container-fluid'>
+    <div class='row'>
+       <div class="col-md-2 " style="background-color:#39bbc2;min-height: 100vh;">
+           <div class='mt-5 fs-5'>
+               <div style="color:rgb(0, 0, 0)">
+               <a routerLink="/dashboard" style="text-decoration: none;color: rgb(0, 0, 0);"><i class="fa-solid fa-bars me-3 "></i></a>
+                   Dashboard
+               </div>
+               <div style="color:rgb(0, 0, 0);margin-top: 13px;">
+                  <a routerLink="/employee" style="text-decoration: none;color:rgb(0, 0, 0) ;"> <i class="fa-brands fa-product-hunt me-3"></i></a>
+                  Employee List</div>
+                 
+           </div>
+           
+           
+       </div>
+       <div class="col-md-10  mt-2 p-3 ">
+        <div>
+           <div class="d-flex align-items-center justify-content-between mb-5">
+                <div class="textEffect" ><u class="mt-2"><h1 class="textlist text-center ms-5 ">Users List</h1></u></div>
+                <div><a routerLink="/employee/add"><button class="btn border"><i class="fa-solid fa-user-plus"></i>Add</button></a></div>
+           </div>
+            <div >
+               <div class="d-flex align-items-center justify-content-between">
+                   <div class=" w-50 d-flex align-items-center justify-content-center"> <input type="text" class="form-control border-dark" placeholder="username" [(ngModel)]="searchKey" name="search">
+                    <div class="dropdown ms-2 " >
+                        <button class="btn border dropdown-toggle shadow " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Status
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item "  (click)="sortId()">By Id</a></li>
+                          <li><a class="dropdown-item" (click)="sortName()">By Name</a></li>
+                          
+                        </ul>
+                      </div></div>
+                      <div><button (click)="generatePdf()" class="btn exportBtn">Export</button></div>
+               </div>
+        
+                <table class="table table-bordered rounded border-dark shadow mt-5 " >
+                    <thead  >
+                        <tr class="table-active p-3 "  >
+                            <th class="text-center" >User Id</th>
+                            <th class="text-center" >Username</th>
+                            <th class="text-center" >Email</th>
+                            <th class="text-center" >Status</th>
+                            <th class="text-center" >Action</th>
+                        </tr>
+                    </thead>
+                    <tbody  >
+                        <tr *ngFor="let employee of allEmployee | search:searchKey | paginate: { itemsPerPage: 5, currentPage: p }" [hidden]="employee.id=='1'" >
+                            <td class="text-center" >{{employee.id}}</td>
+                            <td class="text-center" >{{employee.name}}</td>
+                            <td class="text-center"  >{{employee.email}}</td>
+                            <td class="text-center" ><span [ngClass]="employee.status=='1'?'btn activeBtn':'btn inactiveBtn'">{{employee.status=='1'? 'Active':'Inactive'}}</span> </td>
+                            <td class="text-center">
+                               <div class="d-flex align-items-center justify-content-around">
+                                   <button class="border py-1 px-2 rounded"><a routerLink="/dashboard/edit/{{employee.id}}" style="color: rgb(0, 0, 0);"> <i class="fa-solid fa-pen"></i></a></button>
+                                   <button class="border py-1 px-2 rounded"> <i (click)="removeEmployee(employee.id)" class="fa-solid fa-trash  text-danger"></i></button>
+                               </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               
+            </div>
+            <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+        </div>
+       </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+/* table,tr,th,td{
+    border: 1px solid black;
+}
+.head {
+    height: 20px;
+} */
+
+thead,th{
+    text-align: center;
+    padding:15px 0 ;
+}
+tbody,td{
+    text-align: center;
+}
+
+.textlist{
+    color: rgb(35, 166, 198);
+    font-size: 30px;
+   
+}
+
+.exportBtn{
+    background-color: rgb(7, 142, 142);
+    color: white;
+}
+.activeBtn{
+    background-color: rgb(87, 184, 201);
+    color: black;
+}
+.inactiveBtn{
+    background-color: rgb(209, 229, 245);
+    color: black;
+}
