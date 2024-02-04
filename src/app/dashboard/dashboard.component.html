@@ -1,5 +1,5 @@
 
-<div class="container-fluid">
+<div class="dashboard container-fluid">
     <div class="row">
         <div *ngIf="showSideBar" class="col-md-2 " style="height:100vh;background-color: #39bbc2">
             <div class='mt-5 fs-5'>
@@ -43,11 +43,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 p-2">
-                        <div class="p-2 rounded" style="background-color:  #65cdef;padding: 10px;">Admin profile
-                            <div class="d-flex align-items-center justify-content-center flex-column">
+                    <div class="col-md-4 last-column p-2">
+                        <div class="first-row pb-5 ps-5 pe-5 rounded" style="background-color:  #65cdef;padding: 10px;">Admin profile
+                            <div class="pe-2 ps-2 pt-5 d-flex align-items-center justify-content-center flex-column">
                                 <div *ngIf="!EditAdminStatus"><img style="height: 150px;width: 150px;border-radius: 50%;" [src]="profileImage" alt=""></div>
-                            <div><button class="btn " *ngIf="!EditAdminStatus" (click)="edit()"><h4>Edit Admin Details<i class="fa-solid fa-pen-nib ms-2"></i></h4></button></div>
+                            <div><button class="btn d-flex" *ngIf="!EditAdminStatus" (click)="edit()"><h4>Edit Admin Details<i class="fa-solid fa-pen-nib ms-2"></i></h4></button></div>
                         </div>
 
                        
@@ -74,7 +74,7 @@
                         </div>
                         
                         </div>
-                        <div class="p-2 rounded d-flex align-items-center justify-content-center" style="background-color: #45bef7;margin-top: 20px;height: 160px;"><i class="fa-solid fa-users fs-2 me-2" style="color: #000000;"></i>Employees :{{employeeCount}}</div>
+                        <div class="second-row p-2 rounded d-flex align-items-center justify-content-center" style="background-color: #45bef7;margin-top: 20px;"><i class="fa-solid fa-users fs-2 me-2" style="color: #000000;"></i><h4>Employees :{{employeeCount}}</h4></div>
                     </div>
                 </div>
             </div>

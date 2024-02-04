@@ -3,6 +3,7 @@ import { employeeModel } from '../employee.model';
 import { AdminapiService } from '../services/adminapi.service';
 
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-employee-add',
@@ -22,7 +23,12 @@ export class EmployeeAddComponent {
     this.api.addEmployeeApi(this.employee).subscribe({
       next:(res:employeeModel)=>{
         console.log(res);
-      alert('added successfully')
+        Swal.fire({
+          icon: "success",
+          title: "wow",
+          text:"added successfully"
+         
+        });
          this.employee={}
          this.router.navigateByUrl('employee')
 
