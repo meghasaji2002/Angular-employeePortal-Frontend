@@ -18,8 +18,10 @@ export class EmployeeAddComponent {
   cancelEmployee(){
     this.employee={}
   }
+
+
   addEmployee(){
-    console.log(this.employee);
+    // console.log(this.employee);
     this.api.addEmployeeApi(this.employee).subscribe({
       next:(res:employeeModel)=>{
         console.log(res);

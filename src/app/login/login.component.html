@@ -1,6 +1,6 @@
 <div id="body" style="height: 100vh;" class="d-flex align-items-center justify-content-center">
-    <div style="border-radius: 10px;" class="w-25 border  shadow pt-4 pb-4  mt-1  d-flex flex-column align-items-center justify-content-center ">
-        <h4  class="mb-4 fw-bold">Login Form</h4>
+    <div style="border-radius: 10px;" class="w-25 border shadow pt-4 pb-4  mt-1  d-flex flex-column align-items-center justify-content-center  ">
+        <!-- <h4  class="mb-4 fw-bold">Login Form</h4> -->
         <form (ngSubmit)="login()" #loginform="ngForm" class="d-flex flex-column align-items-center justify-content-center" >
             
             <input type="email" class=" form-control" placeholder="Email" email required [(ngModel)]="email" name="email" #useremail="ngModel">

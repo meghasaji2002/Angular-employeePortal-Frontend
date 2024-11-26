@@ -3,7 +3,7 @@
        <div class="col-md-2 sidebar" style="height:100vh;background-color:  #39bbc2;">
            <div class='mt-5 fs-5'>
                <div style="color:rgb(0, 0, 0)">
-               <i class="fa-solid fa-bars me-2"></i>
+               <a routerLink="/dashboard"><i class="fa-solid fa-bars me-2 text-dark"></i></a>
                    Dashboard
                </div>
                <div style="color:rgb(0, 0, 0);margin-top: 13px;">
@@ -41,8 +41,8 @@
                         </div>
                         <div class="d-flex align-items-center justify-content-end">
     
-                               <button (click)="cancelEmployee()" class='btn cancelBtn'>Cancel</button>
-                               <button (click)="addEmployee()" class='btn addBtn ms-2'>Add</button>
+                               <button type="button" (click)="cancelEmployee()" class='btn cancelBtn'>Cancel</button>
+                               <button type="button" (click)="addEmployee()" class='btn addBtn ms-2'>Add</button>
                         </div>
                         </form>
                    </div>
